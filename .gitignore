@@ -1,0 +1,40 @@
+### Logs & OS generated files
+*.log
+.DS_Store*
+ehthumbs.db
+Icon
+
+Thumbs.db
+._*
+
+# Ignore non-custom parts
+/web
+/vendor
+/.editorconfig
+/.gitattributes
+/.env
+/vendor/
+
+# Ignore configuration files that may contain sensitive information.
+web/sites/*/settings*.php
+web/sites/*/services*.yml
+
+# Ignore paths that contain user-generated content.
+web/sites/*/files
+web/sites/*/private
+
+# Ignore multi-site test environment.
+web/sites/simpletest
+
+# If you prefer to store your .gitignore file in the sites/ folder, comment
+# or delete the previous settings and uncomment the following ones, instead.
+
+# Ignore configuration files that may contain sensitive information.
+# */settings*.php
+
+# Ignore paths that contain user-generated content.
+# */files
+# */private
+
+# Ignore multi-site test environment.
+# simpletest

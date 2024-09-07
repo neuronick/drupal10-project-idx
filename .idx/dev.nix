@@ -28,20 +28,21 @@
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file
       onCreate = {
-        # Example: install JS dependencies from NPM
-        # npm-install = "npm install";
+        # Run composer install on workspace creation
+        composer-install = "composer install";
         # Open editors for the following files by default, if they exist:
         default.openFiles = [ "README.md" ];
       };
-      # To run something each time the workspace is (re)started, use the `onStart` hook
+      onStart = {
+        # Run composer install on workspace creation
+        composer-install = "composer install"; 
+        # Open editors for the following files by default, if they exist:
+        default.openFiles = [ "README.md" ];               
+      };
     };
     # Enable previews and customize configuration
     previews = {
       enable = true;
-      previews = {
-        web = {
-        };
-      };
     };
   };
 }
