@@ -18,7 +18,8 @@
         "composer/installers": "^2.0",
         "drupal/core-composer-scaffold": "^10.3",
         "drupal/core-project-message": "^10.3",
-        "drupal/core-recommended": "^10.3"
+        "drupal/core-recommended": "^10.3",
+        "drush/drush": "^13.1"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -36,6 +37,23 @@
         },
         "sort-packages": true
     },
+    "autoload": {
+        "classmap": [
+          "scripts/composer/ScriptHandler.php"
+        ]
+    },
+    "scripts": {
+        "pre-install-cmd": [
+        ],
+        "pre-update-cmd": [
+        ],
+        "post-install-cmd": [
+          "DrupalProject\\composer\\ScriptHandler::createSymLinks"
+        ],
+        "post-update-cmd": [
+          "DrupalProject\\composer\\ScriptHandler::createSymLinks"
+        ]
+    },        
     "extra": {
         "drupal-scaffold": {
             "locations": {

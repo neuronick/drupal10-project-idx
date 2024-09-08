@@ -43,6 +43,12 @@
     # Enable previews and customize configuration
     previews = {
       enable = true;
+        previews = {
+          web = {
+            command = ["php" "-S" "0.0.0.0:$PORT" "-t" "web"];
+            manager = "web";
+          };
+        }; 
     };
   };
 }
