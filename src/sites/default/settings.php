@@ -897,4 +897,11 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\sqlite\\Driver\\Database\\sqlite',
   'autoload' => 'core/modules/sqlite/src/Driver/Database/sqlite/',
 );
+
+/**
+ * Disable CSS and JS aggregation.
+ */
+$config['system.performance']['css']['preprocess'] = FALSE;
+$config['system.performance']['js']['preprocess'] = FALSE;
+
 $settings['config_sync_directory'] = 'sites/default/files/config_Jjxar7UKP_ID1h6eVWm-Fd17_eQ_fgqyv28rHm6RyBpUZnuJR_MjHUQaSjKkHkv1zMWqIeFqCQ/sync';
